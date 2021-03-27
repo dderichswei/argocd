@@ -1,2 +1,1 @@
-# argocd
-# argocd
+# argocd examples directory
