@@ -14,13 +14,16 @@ spec:
       labels:
         app: nginx
     spec:
-      limits:
-      - max:
-          cpu: "800m"
-        min:
-          cpu: "200m"
       containers:
       - image: nginx
+      
+        resources:
+           limits:
+             memory: 600Mi
+             cpu: 1
+           requests:
+             memory: 300Mi
+             cpu: 500m
         name: nginx
         ports:
         - containerPort: 80
