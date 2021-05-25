@@ -3,6 +3,11 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
+  limits:
+  - max:
+    cpu: "800m"
+  min:
+    cpu: "200m"
   replicas: 5
   revisionHistoryLimit: 3
   selector:
